@@ -1,5 +1,5 @@
 // Sandhu Mobile Accessories — shop logic (cart, search, categories, WhatsApp order)
-const WHATSAPP = '923297587660';
+const WHATSAPP = '923264953932';
 
 const PRODUCTS = [
   { id: 1, name: 'M10 TWS Wireless Earbuds — Bluetooth, Charging Case', price: 999,  old: 1500, cat: 'earbuds',   img: 'earbuds.jpg',   rating: '★★★★★' },
