@@ -32,11 +32,20 @@ function renderProducts() {
         <div><span class="price">Rs ${p.price}</span><span class="old-price">Rs ${p.old}</span></div>
         <div class="stars">${p.rating}</div>
         <div class="card-btns">
-          <button class="add-btn" onclick="addToCart(${p.id})">Add to Cart</button>
-          <a class="wa-btn" target="_blank" href="https://wa.me/${WHATSAPP}?text=${encodeURIComponent('Assalamualaikum! Mujhe ye order karna hai: ' + p.name + ' — Rs ' + p.price)}">💬</a>
+          <button class="buy-btn" onclick="buyNow(${p.id})">🛍️ Buy Now</button>
+          <div class="btn-row">
+            <button class="add-btn" onclick="addToCart(${p.id})">Add to Cart</button>
+            <a class="wa-btn" target="_blank" href="https://wa.me/${WHATSAPP}?text=${encodeURIComponent('Assalamualaikum! Mujhe ye order karna hai: ' + p.name + ' — Rs ' + p.price)}">💬</a>
+          </div>
         </div>
       </div>
     </div>`).join('');
+}
+
+function buyNow(id) {
+  const p = PRODUCTS.find(x => x.id === id);
+  const msg = 'Assalamualaikum! Mujhe ye BUY karna hai:\n\n• ' + p.name.split('—')[0].trim() + ' — Rs ' + p.price + '\n\nTotal: Rs ' + p.price;
+  window.open('https://wa.me/' + WHATSAPP + '?text=' + encodeURIComponent(msg), '_blank');
 }
 
 function addToCart(id) {
