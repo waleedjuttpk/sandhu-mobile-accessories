@@ -1,0 +1,87 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Arial, sans-serif; }
+body { background: #f1f1f1; color: #212121; }
+
+/* Top bar */
+.topbar { background: #d84315; color: #fff; display: flex; justify-content: space-between; padding: 6px 16px; font-size: 13px; flex-wrap: wrap; gap: 4px; }
+
+/* Header */
+.header { background: #f85606; display: flex; align-items: center; gap: 14px; padding: 12px 16px; position: sticky; top: 0; z-index: 50; flex-wrap: wrap; }
+.logo { color: #fff; font-size: 22px; font-weight: 800; line-height: 1.1; }
+.logo span { display: block; font-size: 13px; font-weight: 600; letter-spacing: .5px; }
+.search-box { flex: 1; display: flex; min-width: 200px; }
+.search-box input { flex: 1; border: none; padding: 10px 12px; border-radius: 4px 0 0 4px; font-size: 15px; outline: none; }
+.search-box button { border: none; background: #ffe9dd; padding: 0 16px; border-radius: 0 4px 4px 0; font-size: 16px; cursor: pointer; }
+.cart-btn { background: #fff; color: #f85606; border: none; font-weight: 700; padding: 10px 14px; border-radius: 4px; cursor: pointer; font-size: 15px; }
+.cart-count { background: #d84315; color: #fff; border-radius: 50%; padding: 1px 7px; font-size: 13px; }
+
+/* Hero */
+.hero { background: linear-gradient(120deg, #f85606, #ff8a3d); color: #fff; text-align: center; padding: 34px 16px; }
+.hero h1 { font-size: 26px; margin-bottom: 8px; }
+.hero p { font-size: 15px; opacity: .95; margin-bottom: 16px; }
+.hero-btn { background: #25d366; color: #fff; text-decoration: none; font-weight: 700; padding: 12px 22px; border-radius: 6px; display: inline-block; }
+
+/* Categories */
+.categories { display: flex; gap: 8px; overflow-x: auto; padding: 12px 16px; background: #fff; }
+.cat { border: 1px solid #f85606; background: #fff; color: #f85606; padding: 8px 14px; border-radius: 20px; cursor: pointer; white-space: nowrap; font-size: 14px; font-weight: 600; }
+.cat.active { background: #f85606; color: #fff; }
+
+/* Section head */
+.section-head { display: flex; align-items: baseline; gap: 12px; padding: 18px 16px 4px; }
+.section-head h2 { color: #f85606; font-size: 22px; }
+.sale-note { color: #757575; font-size: 13px; }
+
+/* Product grid */
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 12px; padding: 14px 16px; }
+.card { background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,.08); display: flex; flex-direction: column; position: relative; }
+.card img { width: 100%; height: 160px; object-fit: cover; background: #fafafa; }
+.badge { position: absolute; top: 8px; left: 8px; background: #f85606; color: #fff; font-size: 12px; font-weight: 700; padding: 3px 8px; border-radius: 4px; }
+.card-body { padding: 10px; display: flex; flex-direction: column; gap: 5px; flex: 1; }
+.card-body h3 { font-size: 14px; font-weight: 600; line-height: 1.35; min-height: 38px; }
+.price { color: #f85606; font-size: 18px; font-weight: 800; }
+.old-price { color: #9e9e9e; font-size: 13px; text-decoration: line-through; margin-left: 6px; font-weight: 400; }
+.stars { color: #ffb400; font-size: 13px; }
+.card-btns { display: flex; gap: 6px; margin-top: auto; }
+.add-btn { flex: 1; background: #f85606; color: #fff; border: none; padding: 9px 4px; border-radius: 4px; font-weight: 700; cursor: pointer; font-size: 13px; }
+.wa-btn { background: #25d366; color: #fff; border: none; padding: 9px 10px; border-radius: 4px; cursor: pointer; font-size: 13px; text-decoration: none; }
+.no-result { text-align: center; color: #757575; padding: 20px; }
+
+/* Video */
+.video-section { background: #fff; margin: 10px 16px; padding: 18px; border-radius: 8px; text-align: center; }
+.video-section h2 { margin-bottom: 12px; font-size: 20px; }
+.video-section video { width: 100%; max-width: 480px; border-radius: 8px; }
+
+/* Why */
+.why { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; padding: 14px 16px; }
+.why-card { background: #fff; border-radius: 8px; padding: 16px; text-align: center; font-size: 26px; box-shadow: 0 1px 4px rgba(0,0,0,.08); }
+.why-card h3 { font-size: 15px; margin: 6px 0 4px; }
+.why-card p { font-size: 13px; color: #616161; }
+
+/* Footer */
+.footer { background: #212121; color: #e0e0e0; text-align: center; padding: 24px 16px; margin-top: 10px; }
+.footer a { color: #ff8a3d; }
+.footer p { margin: 4px 0; font-size: 14px; }
+.footer .copy { color: #9e9e9e; font-size: 12px; margin-top: 10px; }
+
+/* Cart drawer */
+.cart-drawer { position: fixed; top: 0; right: -340px; width: 320px; max-width: 90vw; height: 100%; background: #fff; z-index: 100; transition: right .3s; display: flex; flex-direction: column; box-shadow: -2px 0 10px rgba(0,0,0,.2); }
+.cart-drawer.open { right: 0; }
+.cart-head { display: flex; justify-content: space-between; align-items: center; padding: 14px; border-bottom: 1px solid #eee; }
+.cart-head button { border: none; background: none; font-size: 18px; cursor: pointer; }
+.cart-items { flex: 1; overflow-y: auto; padding: 12px 14px; }
+.cart-item { display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px solid #f0f0f0; font-size: 14px; }
+.cart-item .qty button { border: 1px solid #ccc; background: #fff; width: 24px; height: 24px; border-radius: 4px; cursor: pointer; }
+.cart-foot { padding: 14px; border-top: 1px solid #eee; }
+.cart-total { font-size: 16px; margin-bottom: 10px; }
+.order-btn { width: 100%; background: #25d366; color: #fff; border: none; padding: 12px; border-radius: 6px; font-size: 16px; font-weight: 700; cursor: pointer; }
+.empty-cart { color: #9e9e9e; text-align: center; padding: 20px 0; }
+.overlay { position: fixed; inset: 0; background: rgba(0,0,0,.4); z-index: 90; display: none; }
+.overlay.show { display: block; }
+
+/* Toast */
+.toast { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%) translateY(80px); background: #212121; color: #fff; padding: 10px 20px; border-radius: 20px; font-size: 14px; transition: transform .3s; z-index: 200; }
+.toast.show { transform: translateX(-50%) translateY(0); }
+
+@media (max-width: 520px) {
+  .hero h1 { font-size: 21px; }
+  .grid { grid-template-columns: repeat(2, 1fr); }
+}

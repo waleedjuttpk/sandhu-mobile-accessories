@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sandhu Mobile Accessories — Earbuds, Chargers, Covers & More</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Top bar -->
+<div class="topbar">
+  <span>📍 Lahore, Pakistan</span>
+  <span>📱 WhatsApp Order: 0329 7587660</span>
+</div>
+
+<!-- Header (Daraz style) -->
+<header class="header">
+  <div class="logo">Sandhu <span>Mobile Accessories</span></div>
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="Search earbuds, charger, cover...">
+    <button onclick="doSearch()">🔍</button>
+  </div>
+  <button class="cart-btn" onclick="toggleCart()">🛒 Cart <span id="cartCount" class="cart-count">0</span></button>
+</header>
+
+<!-- Hero banner -->
+<section class="hero">
+  <h1>Mobile Accessories — Best Quality, Best Price</h1>
+  <p>Earbuds • Chargers • Cables • Covers • Glass Protectors • Handsfree</p>
+  <a class="hero-btn" href="https://wa.me/923297587660?text=Assalamualaikum!%20Mujhe%20mobile%20accessories%20ka%20order%20karna%20hai." target="_blank">Order on WhatsApp</a>
+</section>
+
+<!-- Categories -->
+<nav class="categories" id="categories">
+  <button class="cat active" data-cat="all">All Products</button>
+  <button class="cat" data-cat="earbuds">Earbuds</button>
+  <button class="cat" data-cat="charger">Chargers</button>
+  <button class="cat" data-cat="cable">Cables</button>
+  <button class="cat" data-cat="cover">Covers</button>
+  <button class="cat" data-cat="glass">Glass Protector</button>
+  <button class="cat" data-cat="handsfree">Handsfree</button>
+</nav>
+
+<!-- Flash sale heading -->
+<div class="section-head">
+  <h2>⚡ Flash Sale</h2>
+  <span class="sale-note">Limited stock — order now!</span>
+</div>
+
+<!-- Product grid -->
+<main class="grid" id="productGrid"></main>
+<p id="noResult" class="no-result" style="display:none">No product found. Try another search.</p>
+
+<!-- Video section -->
+<section class="video-section">
+  <h2>🎬 Watch Our Products</h2>
+  <video controls preload="metadata" poster="earbuds.jpg">
+    <source src="promo.mp4" type="video/mp4">
+    Your browser does not support video.
+  </video>
+</section>
+
+<!-- Why choose us -->
+<section class="why">
+  <div class="why-card">✅<h3>Quality Checked</h3><p>Har cheez check kar ke bhejte hain</p></div>
+  <div class="why-card">💰<h3>Best Price</h3><p>Wholesale rate par retail maal</p></div>
+  <div class="why-card">🚚<h3>Fast Delivery</h3><p>Lahore mein same-day rabta</p></div>
+  <div class="why-card">🔄<h3>Easy Replacement</h3><p>Kharab piece ki replacement</p></div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <h3>Sandhu Mobile Accessories</h3>
+  <p>Owner: Waleed Jutt — Lahore, Pakistan</p>
+  <p>WhatsApp: <a href="https://wa.me/923297587660">0329 7587660</a></p>
+  <p><a href="https://www.facebook.com/profile.php?id=100066317676207" target="_blank">Facebook</a></p>
+  <p class="copy">© 2026 Sandhu Mobile Accessories</p>
+</footer>
+
+<!-- Cart drawer -->
+<div id="cartDrawer" class="cart-drawer">
+  <div class="cart-head">
+    <h3>🛒 Your Cart</h3>
+    <button onclick="toggleCart()">✖</button>
+  </div>
+  <div id="cartItems" class="cart-items"></div>
+  <div class="cart-foot">
+    <div class="cart-total">Total: <strong id="cartTotal">Rs 0</strong></div>
+    <button class="order-btn" onclick="orderWhatsApp()">Order on WhatsApp</button>
+  </div>
+</div>
+<div id="overlay" class="overlay" onclick="toggleCart()"></div>
+
+<div id="toast" class="toast">Added to cart ✅</div>
+
+<script src="app.js"></script>
+</body>
+</html>
